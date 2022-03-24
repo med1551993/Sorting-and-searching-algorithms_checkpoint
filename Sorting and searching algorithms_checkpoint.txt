@@ -1,0 +1,17 @@
+FUNCTION insertionSort (VAR arr: ARRAY_OF INTEGER, n :INTEGER):ARRAY_OF INTEGER
+VAR
+i,j,key : INTEGER;
+
+BEGIN
+  FOR i FROM 1 TO n-1 DO 
+    key = arr[i];
+    j = i-1;
+    
+    while ( j>=0 AND arr[j]>key)
+    	arr[j+1]=arr[j];
+        j = j-1;
+    END_WHILE
+
+    arr[j+1] = key;
+    END_FOR
+END
